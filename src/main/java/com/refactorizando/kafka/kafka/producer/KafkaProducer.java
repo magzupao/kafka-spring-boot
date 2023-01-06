@@ -10,7 +10,7 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Component
+@Service
 @RequiredArgsConstructor
 @Slf4j
 public class KafkaProducer {
