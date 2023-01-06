@@ -1,14 +1,13 @@
 spring:
   kafka:
     topic:
-      name: test-strimzi-topic
+      name: myTopic
     bootstrap-servers: 127.0.0.1:9094
     consumer:
-      group-id: demo-group-id
+      group-id: myGroup
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     producer:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-
