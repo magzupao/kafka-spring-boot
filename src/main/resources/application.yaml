@@ -1,3 +1,5 @@
+kafka.topic.name: javaguides
+
 spring:
   kafka:
 
@@ -20,5 +22,5 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       #value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
   
-    topic:
-      name: javaguides
+#    topic:
+#      name: javaguides
