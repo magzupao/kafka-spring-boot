@@ -15,7 +15,6 @@ public class KafkaController {
 
   private final KafkaProducer kafkaProducer;
 
-
   @PostMapping("/messages/send")
   public ResponseEntity<String> sendMessage(@RequestBody  String message) {
     kafkaProducer.sendMessage(message);
