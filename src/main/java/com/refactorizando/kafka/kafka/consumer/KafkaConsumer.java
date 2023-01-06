@@ -12,7 +12,7 @@ public class KafkaConsumer {
   @KafkaListener(topics = "${kafka.topic.name}")
   public void listener(@Payload String message){
     log.info(String.format("*** *** *** *** Message received -> %s", message));
-    log.info("Message received {} ", message);
+    log.debug("Message received {} ", message);
   }
 
 }
