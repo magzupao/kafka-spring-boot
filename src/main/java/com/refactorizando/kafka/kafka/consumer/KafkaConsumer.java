@@ -13,12 +13,12 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class KafkaConsumer {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);
+  //private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);
 
   //@KafkaListener(topics = "${spring.kafka.topic.name}", groupId = "${spring.kafka.consumer.group-id}")
   @KafkaListener(topics = "${spring.kafka.topic.name}")
   public void consume(String message){
-    LOGGER.info(String.format("*** *** Message received -> %s", message));
+    log.info(String.format("*** *** *** *** Message received -> %s", message));
   }
 
 
