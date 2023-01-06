@@ -1,13 +1,14 @@
-spring.kafka.topic.name=myTopic
-spring.kafka.consumer.bootstrap-servers=127.0.0.1:9092
-spring.kafka.consumer.group-id=myGroup
-spring.kafka.consumer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
-spring.kafka.consumer.value-serializer=org.springframework.kafka.support.serializer.JsonSerializer
-spring.kafka.producer.bootstrap-servers=127.0.0.1:9092
-spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
-spring.kafka.producer.value-serializer=org.springframework.kafka.support.serializer.JsonSerializer
-logging.level.org.*=ERROR
-logging.level.com.*=DEBUG
-logging.level.org.springframework=DEBUG
-
+spring:
+  kafka:
+    topic:
+      name: test-strimzi-topic
+    bootstrap-servers: 127.0.0.1:9094
+    consumer:
+      group-id: demo-group-id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
