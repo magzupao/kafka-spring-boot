@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 public class KafkaConsumer {
 
   @KafkaListener(topics = "${kafka.topic.name}")
-  public void consume(String message){
+  public void listener(@Payload String message){
     log.info(String.format("*** *** *** *** Message received -> %s", message));
     log.info("Message received {} ", message);
   }
