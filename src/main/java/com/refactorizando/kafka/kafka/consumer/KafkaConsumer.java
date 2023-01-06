@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 public class KafkaConsumer {
 
 
-  @KafkaListener(topics = "${kafka.topic.name}")
+  @KafkaListener(topics = "${spring.kafka.topic.name}")
   public void listener(@Payload String message) {
     log.debug("Message received {} ", message);
 
