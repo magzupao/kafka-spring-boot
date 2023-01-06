@@ -14,7 +14,6 @@ public class KafkaConsumer {
   @KafkaListener(topics = "${spring.kafka.topic.name}")
   public void listener(@Payload String message) {
     log.debug("Message received {} ", message);
-
     //Do something
   }
 
