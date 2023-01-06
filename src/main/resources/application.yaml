@@ -2,7 +2,7 @@ spring:
   kafka:
     topic:
       name: myTopic
-    bootstrap-servers: 127.0.0.1:9094
+    bootstrap-servers: 127.0.0.1:9092
     consumer:
       group-id: myGroup
       auto-offset-reset: earliest
