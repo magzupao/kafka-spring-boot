@@ -11,11 +11,11 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class KafkaConsumer {
 
+  private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);
 
-  @KafkaListener(topics = "${spring.kafka.topic.name}")
-  public void listener(@Payload String message) {
-    log.debug("Message received {} ", message);
-    //Do something
+  @KafkaListener(topics = "${spring.kafka.topic.name}", groupId = "${spring.kafka.consumer.group-id}")
+  public void consume(String message){
+    LOGGER.info(String.format("*** *** Message received -> %s", message));
   }
 
 
